@@ -22,10 +22,59 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
 }
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.user-menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 20px;
+  padding: 0;
+}
+
+.icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-menu-panel {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 220px;
+  background-color: #fff;
+  color: #222;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  z-index: 10;
+}
+
+.user-menu-panel p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.user-menu-panel button {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.user-menu-panel button:last-child {
+  margin-bottom: 0;
 }
 
 main {
@@ -190,6 +239,44 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+#cancel-login-btn {
+  background-color: #777;
+}
+
+#cancel-login-btn:hover {
+  background-color: #666;
 }
 
 footer {
