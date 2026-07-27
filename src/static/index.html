@@ -8,6 +8,14 @@
   </head>
   <body>
     <header>
+      <div class="user-menu">
+        <button id="user-menu-toggle" class="icon-btn" aria-label="Open user menu">👤</button>
+        <div id="user-menu-panel" class="user-menu-panel hidden">
+          <p id="auth-status-text">Not logged in</p>
+          <button id="open-login-btn" type="button">Login</button>
+          <button id="logout-btn" type="button" class="hidden">Logout</button>
+        </div>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
@@ -22,8 +30,9 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
+        <h3>Teacher Registration Controls</h3>
+        <p id="signup-auth-required">Teachers must log in to register or unregister students.</p>
+        <form id="signup-form" class="hidden">
           <div class="form-group">
             <label for="email">Student Email:</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
@@ -44,6 +53,26 @@
     <footer>
       <p>&copy; 2026 Mergington High School</p>
     </footer>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+      <div class="modal-content">
+        <h3 id="login-modal-title">Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="teacher-username">Username:</label>
+            <input type="text" id="teacher-username" required />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Login</button>
+            <button type="button" id="cancel-login-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
